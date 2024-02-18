@@ -116,22 +116,21 @@ def removeFalha(dataframes):
 
 
 # Modelo da func. nova
-def remove_pontos_com_falha(dataframes, pontos_com_falha):
-    for i in range(len(dataframes)):
-        dataframes[i] = dataframes[i].drop(dataframes[i][pontos_com_falha[i]].index)
-    return dataframes
+def remove_pontos_com_falha(dlis_df_dict, pontos_com_falha):
+    # Remove linhas com TDEP maior que o maximo desejado 
+    for key, value in dlis_df_dict.items():
+        dlis_df_dict[key] = value.drop(value[value['TDEP'] > pontos_com_falha[key][1]].index)
 
-'''
+    # Remove linhas com TDEP menor que o minimo desejado
+    for key, value in dlis_df_dict.items():
+        dlis_df_dict[key] = value.drop(value[value['TDEP'] < pontos_com_falha[key][0]].index)    
+
 # Defina condições de profundidade para cada dataframe
-pontos_com_falha = [
-    (dataframes['1847']['profundidade '] < 250) | (dataframes['1847']['profundidade '] >= 360),
-    (dataframes['1848']['profundidade '] <= 75) | (dataframes['1848']['profundidade '] >= 210),
-    (dataframes['1851']['profundidade '] <= 60) | (dataframes['1851']['profundidade '] >= 260),
-    (dataframes['1853']['profundidade '] <= 90) | (dataframes['1853']['profundidade '] >= 300),
-    (dataframes['1855']['profundidade '] <= 64) | (dataframes['1855']['profundidade '] >= 215),
-    (dataframes['1857']['profundidade '] <= 90) | (dataframes['1857']['profundidade '] >= 320)
-]
-
-# Chamando a função
-dataframes_sem_falha = remove_pontos_com_falha(dataframes, pontos_com_falha)
-'''
+pontos_com_falha = {
+    '1847': [250, 360],
+    '1848': [75, 210],
+    '1851': [60, 260],
+    '1853': [90, 300],
+    '1855': [64, 215],
+    '1857': [90, 320]
+}
