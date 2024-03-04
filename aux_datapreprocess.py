@@ -1,5 +1,7 @@
 import pandas as pd
 
+
+
 # --------------------------------
 # Func. para remover colunas
     
@@ -24,6 +26,8 @@ Exemplo de uso:
 - removeColunas(dlis_df, colunas_para_remover)
 '''
 
+
+
 # --------------------------------
 # Func. para renomear colunas
 
@@ -42,6 +46,7 @@ def renomeiaColuna(df, coluna_antes, coluna_depois):
 Exemplo de uso:
 renomeia_coluna(dlis_df[0], "GR", "Gama Ray")
 '''
+
 
 
 # --------------------------------
@@ -75,6 +80,8 @@ Exemplo de uso:
 add_label(dlis_df, "Poco", [0,1,2,3,4,5], ["P-47", "P-48", "P-51", "P-53", "P-55", "P-57"])
 '''
 
+
+
 # ---------------------------------
 # Func. para transformacao NPHI
 
@@ -87,6 +94,7 @@ def NPHItransform(dlis_df):
 
 # Modelo da func. nova
 def nphi_transform(dlis_df_dict, pocos):
+    # 0 a 1 (checar)
     for poco in pocos:
         dlis_df_dict[poco]["NPHI"] *= 100
 
@@ -94,6 +102,8 @@ def nphi_transform(dlis_df_dict, pocos):
 Exemplo de uso:
 nphi_transform(dlis_df, [0, 1, 3])
 '''
+
+
 
 # --------------------------------
 # Func. para remover faixas de profundidade com falha
@@ -134,3 +144,28 @@ pontos_com_falha = {
     '1855': [64, 215],
     '1857': [90, 320]
 }
+
+
+
+# --------------------------------
+# Func. para adicionar DCALI
+
+# Modelo da func. antiga
+def addDCALIfilter(dlis_df):
+    for i in range(len(dlis_df)):
+        dlis_df[i]['DCALI'] = dlis_df[i]['CALI'] - dlis_df[i]['BSZ']
+    for i in range(len(dlis_df)):
+        dlis_df[i] = dlis_df[i].drop(
+            dlis_df[i][(dlis_df[i].DCALI > 2) | (dlis_df[i].DCALI < -2)].index)
+        dlis_df[i] = dlis_df[i].drop(
+            dlis_df[i][(dlis_df[i].DRHO > 0.15) | (dlis_df[i].DRHO < -0.15)].index)
+    return dlis_df 
+
+# Modelo da func. nova
+def add_DCALI(dlis_df_dict):
+    for poco in dlis_df_dict.values():
+        if 'CALI' in poco.columns and 'BSZ' in poco.columns:
+            poco['DCALI'] = poco['CALI'] - poco['BSZ']
+        else:
+            # Caso CALI ou BSZ estiverem ausentes
+            poco['DCALI'] = None
