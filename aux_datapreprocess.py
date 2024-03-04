@@ -169,3 +169,12 @@ def add_DCALI(dlis_df_dict):
         else:
             # Caso CALI ou BSZ estiverem ausentes
             poco['DCALI'] = None
+
+def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
+    # remove linhas que tem o valor da curva abaixo do limite inferior
+    for key, value in dlis_df_dict.items():
+        dlis_df_dict[key] = value.drop(value[value[curva] < limite_inferior].index)
+
+    # remove linhas que tem o valor da curva acima do limite superior
+    for key, value in dlis_df_dict.items():
+        dlis_df_dict[key] = value.drop(value[value[curva] > limite_superior].index)
