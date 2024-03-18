@@ -13,14 +13,14 @@ Funcionalidades:
    - Transforma os valores -999.25 em nulos
    - Adiciona a coluna DCALI
    - Limita os valores da curva DCALI no intervalo [-2, 2]
-   - Limita os valores da curva DCALI no intervalo [-0.15, 0.15]
+   - Limita os valores da curva DRHO no intervalo [-0.15, 0.15]
 """
 
 # %% [markdown]
 # ## Importa funções para o pré-processamento
 
 # %%
-from aux_datapreprocess import *
+from pre_processamento import *
 
 from dlisio import dlis
 import pandas as pd
