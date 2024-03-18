@@ -1,3 +1,22 @@
+"""
+Nome do Arquivo: processamento_dados.py
+Versão: 1.0
+Autor: Rafael Takeguma Goto
+Data de Criação: 18/03/2024
+
+Descrição:
+Este arquivo contém funções para processamento de dados de poços, incluindo remoção de colunas, renomeação de colunas,
+transformações de dados, remoção de pontos com falha e adição de colunas calculadas.
+
+Funcionalidades:
+- remove_colunas: Remove colunas especificadas de um DataFrame.
+- renomeiaColuna: Renomeia uma coluna em um DataFrame.
+- nphi_transform: Transforma os valores da curva NPHI de um dicionário de DataFrames.
+- remove_pontos_com_falha: Remove linhas de DataFrames com valores de TDEP fora do intervalo desejado.
+- add_DCALI: Adiciona uma coluna DCALI ao DataFrame com a diferença entre as colunas CALI e BSZ.
+- limita_curva: Remove linhas de DataFrames com valores da curva fora do intervalo desejado.
+"""
+
 import pandas as pd
 
 def remove_colunas(df, colunas):
