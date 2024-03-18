@@ -1,20 +1,20 @@
-# ----------------------------------------------------------------------------- #
-# Nome do Programa: analise_dados.py
-# Versão: 1.0
-# Autor: Rafael Takeguma Goto
-# Data: 08/03/2024
-#
-# Descrição: Este script realiza o carregamento e armazenamento dos dados dos arquivos dlis, 
-#               e operações de pré-processamento.
-#
-# Funcionalidades:
-#   - Carrega os dados
-#   - Cria dataframes (tabelas) para cada poço
-#   - Transforma os valores -999.25 em nulos
-#   - Adiciona a coluna DCALI
-#   - Limita os valores da curva DCALI no intervalo [-2, 2]
-#   - Limita os valores da curva DCALI no intervalo [-0.15, 0.15]
-# ----------------------------------------------------------------------------- #
+"""
+Nome do Programa: analise_dados.py
+Versão: 1.0
+Autor: Rafael Takeguma Goto
+Data: 08/03/2024
+
+Descrição: Este script realiza o carregamento e armazenamento dos dados dos arquivos dlis, 
+               e operações de pré-processamento.
+
+Funcionalidades:
+   - Carrega os dados
+   - Cria dataframes (tabelas) para cada poço
+   - Transforma os valores -999.25 em nulos
+   - Adiciona a coluna DCALI
+   - Limita os valores da curva DCALI no intervalo [-2, 2]
+   - Limita os valores da curva DCALI no intervalo [-0.15, 0.15]
+"""
 
 # %% [markdown]
 # ## Importa funções para o pré-processamento
