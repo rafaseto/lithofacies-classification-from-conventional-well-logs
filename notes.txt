@@ -1,0 +1,39 @@
+HDRS e LLD são sinônimos
+nome unificado é RES_D
+
+RHOB e RHOZ sãi sinônimos
+nome unificado é RHOB
+
+BS e BSZ são sinônimos
+nome unificado BS
+
+HCAL 
+
+Em vez de DCALI usar DCAL
+
+Em vez de CALI usar CAL 
+
+modificar aplicaMnemonico para receber mais de um parametro 
+
+***mantém coluna mesmo se tiver valores faltantes no poço todo***
+
+hierarquia
+grupo -> formação -> membro -> camada
+
+Adicionar colunas das curvas e manter valores em branco pros poços que tem curvas faltantes
+
+1-6 exploratórios
+
+7 explotatórios / desenvolvimento
+
+8 injeção
+
+9 especial
+
+***separar todas as curvas que tem nos arquivos dlis brutos de cada poço***
+
+***gerar dataframes com as curvas***
+
+***ver buracos /// investigar falhas***
+***criar CSV só com as curvas escolhidas***
+
