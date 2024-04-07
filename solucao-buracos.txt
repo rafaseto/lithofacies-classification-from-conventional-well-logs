@@ -1,0 +1,2 @@
+Acho que temos buracos (linhas faltantes) porque eu estou usando a função limita_curva() que
+dropa linhas com valores de DRHO e DCAL indesejados
