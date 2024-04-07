@@ -108,7 +108,7 @@ def add_DCAL(dlis_df_dict):
 
 def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
     """
-    Remove linhas de DataFrames com valores da curva fora do intervalo desejado.
+    Transforma em None as linhas dos DataFrames com valores da curva fora do intervalo desejado
 
     Args:
         dlis_df_dict (dict): Dicionário contendo DataFrames com dados de poços.
@@ -116,10 +116,10 @@ def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
         limite_inferior (float): Limite inferior desejado para os valores da curva.
         limite_superior (float): Limite superior desejado para os valores da curva.
     """
-    # Remove linhas com valores da curva abaixo do limite inferior
-    for key, value in dlis_df_dict.items():
-        dlis_df_dict[key] = value.drop(value[value[curva] < limite_inferior].index)
+    # Transforma em None linhas com valores da curva abaixo do limite inferior
+    for poco in dlis_df_dict.values():
+        poco[curva][poco[curva] < limite_inferior] = None 
 
-    # Remove linhas com valores da curva acima do limite superior
-    for key, value in dlis_df_dict.items():
-        dlis_df_dict[key] = value.drop(value[value[curva] > limite_superior].index)
+    # Transforma em None linhas com valores da curva acima do limite superior
+    for poco in dlis_df_dict.values():
+        poco[curva][poco[curva] > limite_superior] = None
