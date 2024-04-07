@@ -45,17 +45,19 @@ def renomeiaColuna(df, coluna_antes, coluna_depois):
     """
     df.rename(columns={coluna_antes: coluna_depois}, inplace=True)
 
-def aplicaMnemonico(dlis_df_dict, coluna_antes, coluna_depois):
+def aplica_mnemonico(dlis_df_dict, mnemonicos, nome_unificado):
     """
-    Renomeia as colunas em todos os DataFrames com seus mnemonicos respectivos
+    Renomeia os mnemônicos com um nome unificado
 
     Args:
         dlis_df_dict (dict): Dicionário contendo DataFrames com dados de poços.
-        coluna_antes (str): O nome da coluna a ser renomeada.
-        coluna_depois (str): O novo nome da coluna.
+        mnemonicos (str): Lista com mnemônicos
+        nome_unificado (str): O novo nome unificado da coluna.
     """
     for poco in dlis_df_dict.values():
-        poco.rename(columns={coluna_antes: coluna_depois}, inplace=True)
+        for nome in mnemonicos:
+            if nome in poco.columns:
+                poco.rename(columns={nome: nome_unificado}, inplace=True)
 
 
 def nphi_transform(dlis_df_dict, pocos):
