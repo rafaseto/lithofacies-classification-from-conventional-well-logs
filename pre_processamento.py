@@ -90,19 +90,19 @@ def remove_pontos_com_falha(dlis_df_dict, pontos_com_falha):
         dlis_df_dict[key] = value.drop(value[value['TDEP'] < pontos_com_falha[key][0]].index)
 
 
-def add_DCALI(dlis_df_dict):
+def add_DCAL(dlis_df_dict):
     """
-    Adiciona uma coluna DCALI ao DataFrame com a diferença entre as colunas CALI e BSZ.
+    Adiciona uma coluna DCAL ao DataFrame com a diferença entre as colunas CAL e BS.
 
     Args:
         dlis_df_dict (dict): Dicionário contendo DataFrames com dados de poços.
     """
     for poco in dlis_df_dict.values():
-        if 'CALI' in poco.columns and 'BSZ' in poco.columns:
-            poco['DCALI'] = poco['CALI'] - poco['BSZ']
+        if 'CAL' in poco.columns and 'BS' in poco.columns:
+            poco['DCAL'] = poco['CAL'] - poco['BS']
         else:
-            # Caso CALI ou BSZ estejam ausentes, preenche a coluna DCALI com None
-            poco['DCALI'] = None
+            # Caso CAL ou BS estejam ausentes, preenche a coluna DCAL com None
+            poco['DCAL'] = None
 
 
 def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
