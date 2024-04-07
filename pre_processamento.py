@@ -99,7 +99,8 @@ def add_DCAL(dlis_df_dict):
     """
     for poco in dlis_df_dict.values():
         if 'CAL' in poco.columns and 'BS' in poco.columns:
-            poco['DCAL'] = poco['CAL'] - poco['BS']
+            # Faz o cálculo de DCAL apenas para as linhas que possuem CAL e BS diff de None
+            poco['DCAL'] = poco['CAL'][poco['CAL']!=None] - poco['BS'][poco['BS']!=None]
         else:
             # Caso CAL ou BS estejam ausentes, preenche a coluna DCAL com None
             poco['DCAL'] = None
