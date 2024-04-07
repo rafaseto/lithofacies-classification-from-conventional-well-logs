@@ -34,7 +34,7 @@ def remove_colunas(df, colunas):
     return df
 
 
-def renomeiaColuna(df, coluna_antes, coluna_depois):
+def renomeia_coluna(df, coluna_antes, coluna_depois):
     """
     Renomeia uma coluna em um DataFrame.
 
