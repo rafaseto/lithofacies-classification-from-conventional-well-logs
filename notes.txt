@@ -7,7 +7,8 @@ nome unificado é RHOB
 BS e BSZ são sinônimos
 nome unificado BS
 
-HCAL 
+HCAL e CAL são sinônimos
+nome unificado CAL
 
 Em vez de DCALI usar DCAL
 
@@ -37,3 +38,15 @@ Adicionar colunas das curvas e manter valores em branco pros poços que tem curv
 ***ver buracos /// investigar falhas***
 ***criar CSV só com as curvas escolhidas***
 
+
+=====
+
+filtragem so depois que integrar com o AGP
+
+CSV das curvas --> Somente 1 .csv com duas colunas, (1) nome da curva, (2) nome do poço
+
+obs: se tiver mais de uma resistividade profunda?
+
+função para ler arquivo mnemonicos --> duas colunas, (1) nome da curva, (2) nome da ferramenta
+
+todos os alias podem ficar na mesma tabela
