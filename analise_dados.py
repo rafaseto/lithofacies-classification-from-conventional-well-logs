@@ -30,19 +30,12 @@ for file in glob.glob(r'**/Data' + "/*.dlis", recursive=True):
     nome = leitura.origins[0].well_name
     nomes_anp.append(nome)
 
-# %%
-print(nomes_arquivos)
-print(nomes_anp)
-
 # %% [markdown]
 # ## Padroniza nomes fora do padão 'X-BRSA-XXX-SE'
 
 # %%
 nomes_anp[0] = '1-BRSA-551-SE'
 nomes_anp[1] = '1-BRSA-574-SE'
-
-# %%
-nomes_anp
 
 # %% [markdown]
 # ## Salva os identificadores em 'nomes_anp_abreviados'
@@ -54,9 +47,6 @@ for nome in nomes_anp:
     nome_abreviado = nome[7:10]
     nomes_anp_abreviados.append(nome_abreviado)
 
-# %%
-nomes_anp_abreviados
-
 # %% [markdown]
 # ## Cria dicionário para armazenar os dados e respectivos nomes
 
@@ -66,7 +56,6 @@ pares = zip(nomes_anp_abreviados, leituras_dlis)
 
 # Cria dicionário 'dli_dict'
 dli_dict = dict(pares)
-dli_dict
 
 # %% [markdown]
 # ## Separa TODAS as curvas presentes nos .dlis de cada poço
@@ -126,10 +115,6 @@ print("Arquivo curvas_pocos.csv criado com sucesso")
 # ## Cria dataframes para os poços
 
 # %%
-c = dli_dict['574'].frames[0].curves()
-type(c)
-
-# %%
 dlis_df_dict = {}   # Conterá os dataframes respectivos aos poços
 
 # Curvas de perfis escolhidas
@@ -153,9 +138,6 @@ for chave, poco in dli_dict.items():
     # Criando um pandas dataframe do poço respectivo à atual iteração e armazenando o mesmo em dlis_df
     dlis_df_dict[chave] = pd.DataFrame(curvas[curvas_utilizadas_sem_duplicados])
 
-
-# %%
-dlis_df_dict.keys()
 
 # %% [markdown]
 # ## Transforma os valores -999.25 em nulos
@@ -208,13 +190,6 @@ for poco in dlis_df_dict.values():
 for key, poco in dlis_df_dict.items():
     curvas = sorted(poco.keys())
     print(f"{key}: {curvas}")
-
-# %% [markdown]
-# ## Remove valores DRHO e DCAL indesejados (Só depois)
-
-# %%
-#limita_curva(dlis_df_dict, "DRHO", -0.15, 0.15)
-#limita_curva(dlis_df_dict, "DCAL", -2, 2)
 
 # %% [markdown]
 # ## Inverte a ordem das linhas dos dataframes
