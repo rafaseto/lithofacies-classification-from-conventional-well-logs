@@ -1,3 +1,6 @@
+pd.set_option('display.max_rows', None)
+dlis_df_dict['907']
+
 HDRS e LLD são sinônimos
 nome unificado é RES_D
 
