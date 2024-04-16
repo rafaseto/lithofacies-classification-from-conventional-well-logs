@@ -53,3 +53,9 @@ obs: se tiver mais de uma resistividade profunda?
 função para ler arquivo mnemonicos --> duas colunas, (1) nome da curva, (2) nome da ferramenta
 
 todos os alias podem ficar na mesma tabela
+
+====
+
+Frames podem ser os canais
+
+os arquivos CSV das curvas nn levam em conta os outros frames (avisar prof. Simon)
