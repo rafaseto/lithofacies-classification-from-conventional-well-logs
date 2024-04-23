@@ -59,3 +59,15 @@ todos os alias podem ficar na mesma tabela
 Frames podem ser os canais
 
 os arquivos CSV das curvas nn levam em conta os outros frames (avisar prof. Simon)
+
+====
+reunião dia 22/04
+
+Devemos remover BS e CAL depois. 
+Elas não são variáveis discriminatórias.
+
+DTC e DT são sinônimos
+nome unificado: DT
+
+No futuro elimina pontos onde não tem perfil, ou seja, algum nulo.
+"Precisamos do conjunto completo para fazer o ML."
