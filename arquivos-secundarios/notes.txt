@@ -71,3 +71,24 @@ nome unificado: DT
 
 No futuro elimina pontos onde não tem perfil, ou seja, algum nulo.
 "Precisamos do conjunto completo para fazer o ML."
+
+Deixa o nome que vêm do próprio DLIS mesmo, não altere nada
+
+Colocar o link pra planilha dos mnemonicos no fluxograma
+
+Colocar imagem do dict dli_dict no fluxograma
+
+Colocar um nome real do padrão BRSA no fluxograma
+
+Usar os nomes das funções reais no fluxograma
+
+Colocar funções não usadas no lado direito do fluxograma
+
+Colocar como é calculada DCAL no fluxograma
+
+Colocar uma espécie de iteração no fluxograma 
+
+Colocar questão dos vários frames no fluxograma
+
+
+
