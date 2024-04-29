@@ -84,7 +84,7 @@ Usar os nomes das funções reais no fluxograma - OK
 
 Colocar funções não usadas no lado direito do fluxograma - OK
 
-Colocar como é calculada DCAL no fluxograma
+Colocar como é calculada DCAL no fluxograma - OK
 
 Colocar uma espécie de iteração no fluxograma 
 
