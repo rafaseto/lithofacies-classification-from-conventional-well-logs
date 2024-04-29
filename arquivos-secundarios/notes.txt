@@ -86,9 +86,9 @@ Colocar funções não usadas no lado direito do fluxograma - OK
 
 Colocar como é calculada DCAL no fluxograma - OK
 
-Colocar uma espécie de iteração no fluxograma 
+Colocar uma espécie de iteração no fluxograma - OK
 
-Colocar questão dos vários frames no fluxograma
+Colocar questão dos vários frames no fluxograma - OK
 
 
 
