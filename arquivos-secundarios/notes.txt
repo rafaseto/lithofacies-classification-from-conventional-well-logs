@@ -80,7 +80,7 @@ Colocar imagem do dict dli_dict no fluxograma - OK
 
 Colocar um nome real do padrão BRSA no fluxograma - não necessário
 
-Usar os nomes das funções reais no fluxograma
+Usar os nomes das funções reais no fluxograma - OK
 
 Colocar funções não usadas no lado direito do fluxograma
 
