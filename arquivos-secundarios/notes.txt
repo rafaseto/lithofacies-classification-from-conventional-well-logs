@@ -78,7 +78,7 @@ Colocar o link pra planilha dos mnemonicos no fluxograma - OK
 
 Colocar imagem do dict dli_dict no fluxograma - OK
 
-Colocar um nome real do padrão BRSA no fluxograma
+Colocar um nome real do padrão BRSA no fluxograma - não necessário
 
 Usar os nomes das funções reais no fluxograma
 
