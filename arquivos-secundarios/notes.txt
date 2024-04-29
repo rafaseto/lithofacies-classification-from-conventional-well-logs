@@ -74,9 +74,9 @@ No futuro elimina pontos onde não tem perfil, ou seja, algum nulo.
 
 Deixa o nome que vêm do próprio DLIS mesmo, não altere nada
 
-Colocar o link pra planilha dos mnemonicos no fluxograma
+Colocar o link pra planilha dos mnemonicos no fluxograma - OK
 
-Colocar imagem do dict dli_dict no fluxograma
+Colocar imagem do dict dli_dict no fluxograma - OK
 
 Colocar um nome real do padrão BRSA no fluxograma
 
