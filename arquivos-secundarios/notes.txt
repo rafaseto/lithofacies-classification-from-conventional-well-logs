@@ -90,5 +90,28 @@ Colocar uma espécie de iteração no fluxograma - OK
 
 Colocar questão dos vários frames no fluxograma - OK
 
+====
+
+reunião dia 30/04
+
+DRHO e HDRA são sinônimos
+nome unificado: DRHO
+
+Verificar documentação da glob (questão do tamanho da RAM)
+
+Verificar código fonte do dlisio	
+	colocar link do código fonte do dlisio (referência)
+	colocar autor e ano
+
+Futuramente trabalhar com parâmetros na pasta Data (para discriminar os arquivos que queremos)
+
+Lembre: nome do poço é uma variável, logo é uma coluna
+
+Consertar estrutura do for
+
+Fazer tabela com todos os alias e colocar o link no fluxograma
+
+Colocar ordem das colunas
+
 
 
