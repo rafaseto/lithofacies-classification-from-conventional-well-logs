@@ -107,7 +107,7 @@ Futuramente trabalhar com parâmetros na pasta Data (para discriminar os arquivo
 
 Lembre: nome do poço é uma variável, logo é uma coluna
 
-Consertar estrutura do for
+Consertar estrutura do for - OK
 
 Fazer tabela com todos os alias e colocar o link no fluxograma - OK
 
