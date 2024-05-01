@@ -109,7 +109,7 @@ Lembre: nome do poço é uma variável, logo é uma coluna
 
 Consertar estrutura do for
 
-Fazer tabela com todos os alias e colocar o link no fluxograma
+Fazer tabela com todos os alias e colocar o link no fluxograma - OK
 
 Colocar ordem das colunas
 
