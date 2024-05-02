@@ -113,5 +113,6 @@ Fazer tabela com todos os alias e colocar o link no fluxograma - OK
 
 Colocar ordem das colunas
 
+Detalhar mais a parte da leitura inicial - OK
 
 
