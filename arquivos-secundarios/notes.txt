@@ -123,5 +123,11 @@ Próximos passos:
     - tirar o zero mais a direita
     - fazer o cálculo de polegada para metro
 
-2. Analisar profundidades comuns a todas as curvas escolhidas
-    - manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas)
+2. Analisar profundidades comuns a todas as curvas escolhidas - OK
+    - conclusão: o primeiro frame do 605 tem uma variação maior da TDEP (15cm ou 16cm), logo tem menos linhas na tabela.
+    Todas as profundidades existentes no primeiro frame também existem nos outros frames, porém a recíproca não é verdadeira, 
+    ou seja, existem valores de profundidade nos outros três frames que não existem no primeiro. Dessa forma, para fazer o 
+    JOIN eu vou utilizar todos os valores de profundidade que existem no primeiro frame e juntar com os mesmos valores de profundidade
+    nos outros frames.
+
+3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas)
