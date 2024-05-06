@@ -119,7 +119,7 @@ Detalhar mais a parte da leitura inicial - OK
 
 Próximos passos:
 
-1. Converter de polegadas para metros
+1. Converter de polegadas para metros - OK
     - tirar o zero mais a direita
     - fazer o cálculo de polegada para metro
 
