@@ -115,4 +115,10 @@ Colocar ordem das colunas
 
 Detalhar mais a parte da leitura inicial - OK
 
+====
 
+Próximos passos:
+
+1. Converter de polegadas para metros
+    - tirar o zero mais a direita
+    - fazer o cálculo de polegada para metro
