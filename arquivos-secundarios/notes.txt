@@ -122,3 +122,6 @@ Próximos passos:
 1. Converter de polegadas para metros
     - tirar o zero mais a direita
     - fazer o cálculo de polegada para metro
+
+2. Analisar profundidades comuns a todas as curvas escolhidas
+    - manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas)
