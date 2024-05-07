@@ -130,7 +130,7 @@ Próximos passos:
     JOIN eu vou utilizar todos os valores de profundidade que existem no primeiro frame e juntar com os mesmos valores de profundidade
     nos outros frames.
 
-3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas)
+3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas) - OK
 
 ====
 
