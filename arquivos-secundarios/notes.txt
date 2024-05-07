@@ -134,7 +134,9 @@ Próximos passos:
 
 4. Juntar os dataframes dos quatro frames em um só - OK´
 
-5. Manter apenas as curvas escolhidas
+5. Manter apenas as curvas escolhidas - OK
+
+6. Repetir o processo para o poço 551
 
 ====
 
