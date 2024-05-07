@@ -131,3 +131,25 @@ Próximos passos:
     nos outros frames.
 
 3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas)
+
+====
+
+reunião dia 06/05
+
+DTC deve ser escrita como DT
+
+Ordenar escrita das curvas de perfis, conforme definido por Simon e Vandelli:
+    1. TDEP
+    2. BS
+    3. CAL
+    4. DCAL
+    5. GR
+    6. RESD
+    7. DT 
+    8. RHOB 
+    9. DRHO 
+    10. NPHI
+    11. PE 
+
+
+
