@@ -132,6 +132,8 @@ Próximos passos:
 
 3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas) - OK
 
+4. Juntar os dataframes dos quatro frames em um só
+
 ====
 
 reunião dia 06/05
