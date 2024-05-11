@@ -1,16 +1,17 @@
 """
 Nome do Arquivo: processamento_dados.py
-Versão: 1.0
+Versão: 1.1
 Autor: Rafael Takeguma Goto
 Data de Criação: 18/03/2024
+Data de Modificação: 11/05/2024
 
 Descrição:
-Este arquivo contém funções para processamento de dados de poços, incluindo remoção de colunas, renomeação de colunas,
-transformações de dados, remoção de pontos com falha e adição de colunas calculadas.
+Este arquivo contém funções para o pré-processamento de dados, que foram extraídos dos arquivos com a extensão dlis, de poços de petróleo.
 
 Funcionalidades:
 - remove_colunas: Remove colunas especificadas de um DataFrame.
 - renomeiaColuna: Renomeia uma coluna em um DataFrame.
+- aplica_mnemonico: Renomeia curvas com nomes diferentes consideradas equivalentes para um nome unificado.
 - nphi_transform: Transforma os valores da curva NPHI de um dicionário de DataFrames.
 - remove_pontos_com_falha: Remove linhas de DataFrames com valores de TDEP fora do intervalo desejado.
 - add_DCALI: Adiciona uma coluna DCALI ao DataFrame com a diferença entre as colunas CALI e BSZ.
@@ -47,7 +48,7 @@ def renomeia_coluna(df, coluna_antes, coluna_depois):
 
 def aplica_mnemonico(dlis_df_dict, mnemonicos, nome_unificado):
     """
-    Renomeia os mnemônicos com um nome unificado
+    Renomeia curvas com nomes diferentes consideradas equivalentes para um nome unificado.
 
     Args:
         dlis_df_dict (dict): Dicionário contendo DataFrames com dados de poços.
