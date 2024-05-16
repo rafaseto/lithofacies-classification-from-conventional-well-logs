@@ -1,9 +1,9 @@
 """
 Nome do Arquivo: processamento_dados.py
-Versão: 1.1
+Versão: 1.2
 Autor: Rafael Takeguma Goto
 Data de Criação: 18/03/2024
-Data de Modificação: 11/05/2024
+Data de Modificação: 16/05/2024
 
 Descrição:
 Este arquivo contém funções para o pré-processamento de dados, que foram extraídos dos arquivos com a extensão dlis, de poços de petróleo.
@@ -16,6 +16,9 @@ Funcionalidades:
 - remove_pontos_com_falha: Remove linhas de DataFrames com valores de TDEP fora do intervalo desejado.
 - add_DCALI: Adiciona uma coluna DCALI ao DataFrame com a diferença entre as colunas CALI e BSZ.
 - limita_curva: Remove linhas de DataFrames com valores da curva fora do intervalo desejado.
+- cria_frames_dict: Cria um dicionário para armazenar os frames de um poço
+- cria_dataframes_dict: Cria um dicionário para armazenar os dataframes respectivos aos frames de um poço.
+- unifica_dataframes: Unifica múltiplos dataframes em um dataframe ('dataframe_unificado')
 """
 
 import pandas as pd
@@ -29,10 +32,10 @@ def remove_colunas(df, colunas):
         colunas (list): Lista de nomes de colunas a serem removidas.
 
     Returns:
-        DataFrame: O DataFrame resultante após a remoção das colunas.
+        df_filtrado (DataFrame): O DataFrame resultante após a remoção das colunas.
     """
-    df = df.drop(columns=colunas, errors='ignore')
-    return df
+    df_filtrado = df.drop(columns=colunas, errors='ignore')
+    return df_filtrado
 
 
 def renomeia_coluna(df, coluna_antes, coluna_depois):
@@ -124,3 +127,61 @@ def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
     # Transforma em None linhas com valores da curva acima do limite superior
     for poco in dlis_df_dict.values():
         poco[curva][poco[curva] > limite_superior] = None
+
+
+def cria_frames_dict(frames_dict, poco):
+    """
+    Cria um dicionário para armazenar os frames de um poço
+
+    Args:
+        frames_dict (dict): Dicionário contendo ndarrays com dados de frames de poços.
+        poco (LogicalFile): Arquivo do poço que contém os frames que serão armazenados no dicionário. 
+    """
+    for frame in poco.frames:
+        indice = poco.frames.index(frame)
+
+        curvas = frame.curves()
+
+        frames_dict[indice] = curvas
+
+
+def cria_dataframes_dict(frames_dict, dataframes_dict, curvas_escolhidas):
+    """
+    Cria um dicionário para armazenar os dataframes respectivos aos frames de um poço.
+
+    Args:
+        frames_dict (dict): Dicionário contendo ndarrays com dados de frames do poço.
+        dataframes_dict (dict): Dicionário contendo dataframes com dados de frames do poço
+        curvas_escolhidas (list): Lista contendo os nomes das curvas escolhidas.
+    """
+    indice_frame = 0
+
+    for frame in frames_dict.values():
+        i = 0
+        nomes_curvas = frame.dtype.names
+        frame_dict = {}
+
+        for nome in nomes_curvas:
+            if nome in curvas_escolhidas:
+                dados_curva = [tupla[i] for tupla in frame]
+                
+                frame_dict[nome] = dados_curva
+            i += 1
+
+        dataframes_dict[indice_frame] = pd.DataFrame(frame_dict)
+        indice_frame += 1
+
+
+def unifica_dataframes(dataframes_dict):
+    """
+    Unifica múltiplos dataframes em um dataframe ('dataframe_unificado')
+
+    Args:
+        dataframes_dict (dict): Dicionário contendo dataframes com dados de frames do poço
+    """
+    dataframe_unificado = dataframes_dict[0]
+
+    for i in range(1, len(dataframes_dict)):
+        dataframe_unificado = pd.merge(dataframe_unificado, dataframes_dict[i], on='TDEP', how='outer', suffixes=(None, "_new"))
+
+    return dataframe_unificado
