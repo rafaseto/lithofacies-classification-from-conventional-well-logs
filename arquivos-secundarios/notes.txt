@@ -132,7 +132,7 @@ Próximos passos:
 
 3. Manter apenas as profundidades de interesse (que possuem valor para todas as curvas escolhidas) - OK
 
-4. Juntar os dataframes dos quatro frames em um só - OK´
+4. Juntar os dataframes dos quatro frames em um só - OK
 
 5. Manter apenas as curvas escolhidas - OK
 
@@ -156,6 +156,10 @@ Ordenar escrita das curvas de perfis, conforme definido por Simon e Vandelli:
     9. DRHO 
     10. NPHI
     11. PE 
+
+===
+
+Problema encontrado com o poço 551: Temos mais de uma curva de resistividade profunda.
 
 
 
