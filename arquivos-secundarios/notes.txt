@@ -177,6 +177,6 @@ filtro DT: a definir
 
 considerar pior cenário valores de TDEP dos frames, criar função para testar
 
-buscar dentro do arquivo de dlis as unidades de medidas da profundidade e das curvas
+buscar dentro do arquivo de dlis as unidades de medidas da profundidade e das curvas - OK
 
 identificar no fluxograma as funções que foram utilizadas
