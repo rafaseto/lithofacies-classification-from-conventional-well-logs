@@ -129,20 +129,26 @@ def limita_curva(dlis_df_dict, curva, limite_inferior, limite_superior):
         poco[curva][poco[curva] > limite_superior] = None
 
 
-def cria_frames_dict(frames_dict, poco):
+def cria_frames_dict(poco):
     """
     Cria um dicionário para armazenar os frames de um poço
 
     Args:
-        frames_dict (dict): Dicionário contendo ndarrays com dados de frames de poços.
         poco (LogicalFile): Arquivo do poço que contém os frames que serão armazenados no dicionário. 
+
+    Returns:
+        frames_dict (dict): Dicionário contendo ndarrays com dados de frames de poços.
     """
+    frames_dict = {}
+
     for frame in poco.frames:
         indice = poco.frames.index(frame)
 
         curvas = frame.curves()
 
         frames_dict[indice] = curvas
+
+    return frames_dict
 
 
 def cria_dataframes_dict(frames_dict, dataframes_dict, curvas_escolhidas):
