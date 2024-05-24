@@ -188,9 +188,9 @@ reunião (23/05/24)
 
 595 agora tem PE (PEU)
 
-Botar no grupo do whatsapp os poços do lote 02 que deram certo e os que deram errado (botar o erro também)
+Botar no grupo do whatsapp os poços do lote 02 que deram certo e os que deram errado (botar o erro também) - OK
 
-Atualizar o repo com o 595 e os do lote 02 que deram certo
+Atualizar o repo com o 595 e os do lote 02 que deram certo - OK
 
 filtros definidos: CALIPER e RHOB
 
