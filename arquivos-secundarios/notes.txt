@@ -196,3 +196,5 @@ filtros definidos: CALIPER e RHOB
 
 ver modelo do relatório final na pasta do grupo
 
+Simon disse que provavelmente iremos abandonar os poços problemáticos do lote 02
+
