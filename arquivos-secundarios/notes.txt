@@ -198,3 +198,11 @@ ver modelo do relatório final na pasta do grupo
 
 Simon disse que provavelmente iremos abandonar os poços problemáticos do lote 02
 
+====
+
+reunião (07/06/24)
+
+quando tem reboco = diâmetro do poço (CAL) é menor que a broca (BS), logo DCAL é negativo
+
+quando o caliper é arrombado = diâmetro do poço (CAL) é maior que a broca (BS), logo DCAL é positivo
+
