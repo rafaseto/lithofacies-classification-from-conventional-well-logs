@@ -206,3 +206,5 @@ quando tem reboco = diâmetro do poço (CAL) é menor que a broca (BS), logo DCA
 
 quando o caliper é arrombado = diâmetro do poço (CAL) é maior que a broca (BS), logo DCAL é positivo
 
+lembrar de botar o fluxograma no relatório final
+
