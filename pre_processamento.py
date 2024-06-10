@@ -151,16 +151,17 @@ def cria_frames_dict(poco):
     return frames_dict
 
 
-def cria_dataframes_dict(frames_dict, dataframes_dict, curvas_escolhidas):
+def cria_dataframes_dict(frames_dict, curvas_escolhidas):
     """
     Cria um dicionário para armazenar os dataframes respectivos aos frames de um poço.
 
     Args:
         frames_dict (dict): Dicionário contendo ndarrays com dados de frames do poço.
-        dataframes_dict (dict): Dicionário contendo dataframes com dados de frames do poço
         curvas_escolhidas (list): Lista contendo os nomes das curvas escolhidas.
     """
     indice_frame = 0
+    # Dicionário contendo dataframes com dados de frames do poço
+    dataframes_dict = {}
 
     for frame in frames_dict.values():
         i = 0
