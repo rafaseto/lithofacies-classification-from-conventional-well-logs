@@ -158,6 +158,9 @@ def cria_dataframes_dict(frames_dict, curvas_escolhidas):
     Args:
         frames_dict (dict): Dicionário contendo ndarrays com dados de frames do poço.
         curvas_escolhidas (list): Lista contendo os nomes das curvas escolhidas.
+
+    Returns:
+        dataframes_dict (dict): Dicionário contendo dataframes com dados de frames do poço
     """
     indice_frame = 0
     # Dicionário contendo dataframes com dados de frames do poço
@@ -177,6 +180,8 @@ def cria_dataframes_dict(frames_dict, curvas_escolhidas):
 
         dataframes_dict[indice_frame] = pd.DataFrame(frame_dict)
         indice_frame += 1
+
+    return dataframes_dict
 
 
 def unifica_dataframes(dataframes_dict):
