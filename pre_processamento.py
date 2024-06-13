@@ -197,3 +197,26 @@ def unifica_dataframes(dataframes_dict):
         dataframe_unificado = pd.merge(dataframe_unificado, dataframes_dict[i], on='TDEP', how='outer', suffixes=(None, "_new"))
 
     return dataframe_unificado
+
+
+def calcular_diferenca(df, coluna1, coluna2, nova_coluna):
+    """
+    Calcula a diferença entre duas colunas numéricas em um DataFrame e armazena o resultado em uma nova coluna.
+
+    Args:
+    df (pd.DataFrame): DataFrame contendo as colunas.
+    coluna1 (str): Nome da primeira coluna.
+    coluna2 (str): Nome da segunda coluna.
+    nova_coluna (str): Nome da nova coluna onde a diferença será armazenada.
+
+    Returns:
+    pd.DataFrame: DataFrame com a nova coluna adicionada.
+    """
+    # Verificar se as colunas existem no DataFrame
+    if coluna1 not in df.columns or coluna2 not in df.columns:
+        raise ValueError(f"Colunas '{coluna1}' e/ou '{coluna2}' não encontradas no DataFrame")
+    
+    # Calcular a diferença, tratando valores ausentes (NaN) se necessário
+    df[nova_coluna] = df[coluna1].fillna(0) - df[coluna2].fillna(0)
+    
+    return df
