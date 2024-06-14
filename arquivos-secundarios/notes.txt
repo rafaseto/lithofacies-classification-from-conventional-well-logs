@@ -208,3 +208,9 @@ quando o caliper é arrombado = diâmetro do poço (CAL) é maior que a broca (B
 
 lembrar de botar o fluxograma no relatório final
 
+====
+
+reunião (13/06/24)
+
+exportar em dlis ou las após o processamento para Vandelli carregar no IP
+
