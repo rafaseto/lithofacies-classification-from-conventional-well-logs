@@ -194,6 +194,9 @@ Atualizar o repo com o 595 e os do lote 02 que deram certo - OK
 
 filtros definidos: CALIPER e RHOB
 
+#limita_curva(dataframes_dict, "DRHO", -0.15, 0.15)
+#limita_curva(dataframes_dict, "DCAL", -2, 2)
+
 ver modelo do relatório final na pasta do grupo
 
 Simon disse que provavelmente iremos abandonar os poços problemáticos do lote 02
