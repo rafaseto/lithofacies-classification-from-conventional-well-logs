@@ -226,5 +226,5 @@ Tem problema com o P_696 - tirar dúvidas com Vandelli
 
 próximos passos: 
     - limitar intervalo do GR 0-150 (ok)
-    - add grid que nem no perfil composto
-    - deixar os números do eixo de 50 em 50 que nem no perfil composto
+    - add grid que nem no perfil composto (ok)
+    - deixar os números do eixo de 50 em 50 que nem no perfil composto (ok)
