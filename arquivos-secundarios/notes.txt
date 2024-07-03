@@ -228,3 +228,9 @@ próximos passos:
     - limitar intervalo do GR 0-150 (ok)
     - add grid que nem no perfil composto (ok)
     - deixar os números do eixo de 50 em 50 que nem no perfil composto (ok)
+    - mover os rótulos para do GR para cima (ok)
+    - add rótulos de 150 a 300
+    - negritar a parte do grid com números
+
+tópicos para falar na reunião: 
+    - valores antes dos valores constantes no fim do poço que não tem no perfil composto
