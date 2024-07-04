@@ -229,7 +229,12 @@ próximos passos:
     - add grid que nem no perfil composto (ok)
     - deixar os números do eixo de 50 em 50 que nem no perfil composto (ok)
     - mover os rótulos para do GR para cima (ok)
-    - add rótulos de 150 a 300
+    - add rótulos de 150 a 300 (ok)
+    - criar mesmos gráficos, agora levando em conta os valores interpolados
+    - criar mesmos gráficos, agora com os dados filtrados
+    - criar mesmos gráficos, com o valor de P_696 errado, para apresentar
+    - perguntar para Dannilo qual foi o problema com o P_696 (ok)
+    - lidar com os warnings
     - negritar a parte do grid com números
 
 tópicos para falar na reunião: 
