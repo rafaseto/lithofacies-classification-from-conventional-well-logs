@@ -230,7 +230,7 @@ próximos passos:
     - deixar os números do eixo de 50 em 50 que nem no perfil composto (ok)
     - mover os rótulos para do GR para cima (ok)
     - add rótulos de 150 a 300 (ok)
-    - criar mesmos gráficos, agora levando em conta os valores interpolados
+    - criar mesmos gráficos, agora levando em conta os valores interpolados (ok)
     - criar mesmos gráficos, agora com os dados filtrados
     - criar mesmos gráficos, com o valor de P_696 errado, para apresentar (ok)
     - perguntar para Dannilo qual foi o problema com o P_696 (ok)
