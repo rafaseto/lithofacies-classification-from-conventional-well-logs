@@ -3,7 +3,7 @@ Nome do Arquivo: processamento_dados.py
 Versão: 1.2
 Autor: Rafael Takeguma Goto
 Data de Criação: 18/03/2024
-Data de Modificação: 16/05/2024
+Data de Modificação: 27/07/2024
 
 Descrição:
 Este arquivo contém funções para o pré-processamento de dados, que foram extraídos dos arquivos com a extensão dlis, de poços de petróleo.
@@ -19,6 +19,7 @@ Funcionalidades:
 - cria_frames_dict: Cria um dicionário para armazenar os frames de um poço
 - cria_dataframes_dict: Cria um dicionário para armazenar os dataframes respectivos aos frames de um poço.
 - unifica_dataframes: Unifica múltiplos dataframes em um dataframe ('dataframe_unificado')
+- conta_registros_litologia_unidade: Conta o número de registros de uma litologia em cada unidade
 """
 
 import pandas as pd
@@ -220,3 +221,20 @@ def calcular_diferenca(df, coluna1, coluna2, nova_coluna):
     df[nova_coluna] = df[coluna1].fillna(0) - df[coluna2].fillna(0)
     
     return df
+
+
+# Função que conta o número de registros de uma litologia em cada unidade
+def conta_registros_litologia_unidade(df_dict, litologia):
+    total_combinations = {}
+    
+    for df in df_dict.values():
+        filtered_df = df[df['Litologia'] == litologia] 
+        combinations = filtered_df.groupby(["UnidadeF", "UnidadeM"]).size()
+        for (a, b), count in combinations.items():
+            key = f"{a}_{b}"
+            if key in total_combinations:
+                total_combinations[key] += count
+            else:
+                total_combinations[key] = count
+    
+    return total_combinations
