@@ -224,17 +224,16 @@ def calcular_diferenca(df, coluna1, coluna2, nova_coluna):
 
 
 # Função que conta o número de registros de uma litologia em cada unidade
-def conta_registros_litologia_unidade(df_dict, litologia):
+def conta_registros_litologia_unidade(df, litologia):
     total_combinations = {}
     
-    for df in df_dict.values():
-        filtered_df = df[df['Litologia'] == litologia] 
-        combinations = filtered_df.groupby(["UnidadeF", "UnidadeM"]).size()
-        for (a, b), count in combinations.items():
-            key = f"{a}_{b}"
-            if key in total_combinations:
-                total_combinations[key] += count
-            else:
-                total_combinations[key] = count
+    filtered_df = df[df['Litologia'] == litologia] 
+    combinations = filtered_df.groupby(["UnidadeF", "UnidadeM"]).size()
+    for (a, b), count in combinations.items():
+        key = f"{a}_{b}"
+        if key in total_combinations:
+            total_combinations[key] += count
+        else:
+            total_combinations[key] = count
     
     return total_combinations
