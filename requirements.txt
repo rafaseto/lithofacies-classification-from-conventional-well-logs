@@ -1,0 +1,7 @@
+pandas
+numpy
+dlisio
+matplotlib
+ipykernel
+sklearn
+seaborn
