@@ -3,3 +3,4 @@ numpy
 dlisio
 matplotlib
 ipykernel
+sklearn
