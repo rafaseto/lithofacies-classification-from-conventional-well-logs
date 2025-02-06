@@ -4,3 +4,4 @@ dlisio
 matplotlib
 ipykernel
 sklearn
+seaborn
